@@ -1,0 +1,110 @@
+:root {
+    --gold: #c5a059;
+    --dark: #1a1a1a;
+    --light: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin: 0 20px; }
+nav ul li a { text-decoration: none; color: var(--dark); font-weight: 600; }
+
+.btn-book {
+    background: var(--gold);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: 2px solid var(--gold);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-main:hover { background: var(--gold); }
+
+/* Services */
+#services { padding: 80px 10%; background: var(--light); }
+.section-title { text-align: center; margin-bottom: 50px; font-family: 'Playfair Display', serif; font-size: 2.5rem; }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 4px solid var(--gold);
+    transition: transform 0.3s;
+}
+
+.service-card:hover { transform: translateY(-10px); }
+.price { display: block; margin-top: 15px; font-weight: bold; color: var(--gold); }
+
+/* Contact Form */
+#contact { padding: 80px 10%; }
+.contact-container { max-width: 600px; margin: auto; text-align: center; }
+form { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+input, select { padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+.btn-submit { background: var(--dark); color: white; padding: 15px; border: none; cursor: pointer; }
+
+footer { background: var(--dark); color: white; text-align: center; padding: 20px; }

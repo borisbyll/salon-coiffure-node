@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Atelier Capillaire | Coiffeur Créateur</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">L'ATELIER</div>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn-book">Prendre RDV</a>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Révélez votre éclat.</h1>
+            <p>L'expertise de la haute coiffure dans un cadre intimiste et chaleureux.</p>
+            <a href="#services" class="btn-main">Découvrir nos soins</a>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2 class="section-title">Nos Prestations</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Coupe Signature</h3>
+                <p>Consultation personnalisée, shampoing massant et coupe stylisée.</p>
+                <span class="price">Dès 45€</span>
+            </div>
+            <div class="service-card">
+                <h3>Coloration Bio</h3>
+                <p>Teintures naturelles sans ammoniaque pour préserver votre fibre.</p>
+                <span class="price">Dès 65€</span>
+            </div>
+            <div class="service-card">
+                <h3>Soin Profond</h3>
+                <p>Rituel à la kératine pour redonner force et brillance.</p>
+                <span class="price">Dès 30€</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contactez-nous</h2>
+            <form id="booking-form">
+                <input type="text" placeholder="Votre Nom" required>
+                <input type="email" placeholder="Votre Email" required>
+                <select>
+                    <option>Choisir un service</option>
+                    <option>Coupe</option>
+                    <option>Coloration</option>
+                    <option>Barbe</option>
+                </select>
+                <button type="submit" class="btn-submit">Envoyer la demande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 L'Atelier Capillaire - 12 rue du Style, Paris</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
