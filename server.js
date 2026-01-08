@@ -3,22 +3,29 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Permet au serveur de lire les données envoyées par le formulaire
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Sert les fichiers statiques (ton design, tes images)
-app.use(express.static('public'));
+// 1. On indique explicitement où sont les fichiers statiques
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Route pour gérer la prise de rendez-vous
+// 2. On force l'envoi de l'index.html quand on arrive sur "/"
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 app.post('/api/rendezvous', (req, res) => {
     const { nom, email, service } = req.body;
-    console.log(`Nouveau RDV reçu : ${nom} pour un(e) ${service}`);
-    
-    // Ici, plus tard, on ajoutera le code pour enregistrer en base de données
-    res.json({ message: "Succès ! Votre rendez-vous est enregistré côté serveur." });
+    console.log(`Nouveau RDV reçu : ${nom}`);
+    res.json({ message: "Succès ! Votre rendez-vous est enregistré." });
+});
+
+app.listen(PORT, () => {
+    console.log(`Serveur prêt sur le port ${PORT}`);
+});
 });
 
 app.listen(PORT, () => {
     console.log(`Serveur démarré sur http://localhost:${PORT}`);
+
 });
