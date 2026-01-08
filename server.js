@@ -23,9 +23,9 @@ app.post('/api/rendezvous', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Serveur prêt sur le port ${PORT}`);
 });
-});
 
 app.listen(PORT, () => {
     console.log(`Serveur démarré sur http://localhost:${PORT}`);
 
 });
+
